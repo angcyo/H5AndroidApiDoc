@@ -2,3 +2,40 @@
     padding: 10px;
     overflow: hidden;
 }
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.click_item {
+    color: #555;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.click_item:hover,
+.click_item:focus {
+    color: #555;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.remove_item {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    margin-top: 2px;
+    transition: all 700ms;
+    opacity: 0;
+}
+
+.remove_item:hover {
+    background-color: rgba(102, 175, 233, .6);
+    border-radius: 45px;
+}
