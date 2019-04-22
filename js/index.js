@@ -105,10 +105,72 @@ function openJcenter(input) {
     updateHistoryUI('#jcenter_history', getHistory(JCENTER))
 }
 
+const LEFT_LINKS = [{
+    'title': "MDN Web 开发文档",
+    'link': 'https://developer.mozilla.org/zh-CN/docs/Web/Tutorials'
+}, {
+    'title': "前站导航",
+    'link': 'https://www.frontendjs.com/'
+}, {
+    'title': "BootCDN",
+    'link': 'https://www.bootcdn.cn/'
+}, {
+    'title': "Android OS源码",
+    'link': 'http://www.androidos.net.cn/'
+}, {
+    'title': 'Java 开源库排行榜',
+    'link': 'https://github.com/search?l=Java&type=Repositories&q=stars:>=1000'
+}, {
+    'title': 'Java 最近流行开源库排行榜',
+    'link': 'https://github.com/search?l=Java&type=Repositories&q=stars:>=1000&s=updated&o=desc'
+}, {
+    'title': '阿里巴巴镜像',
+    'link': 'https://opsx.alibaba.com/mirror?lang=zh-CN'
+}, {
+    'title': 'Github 排行榜',
+    'link': 'https://github.com/search?type=Repositories&q=stars:%3E=5000'
+}]
+
+
+const RIGHT_LINKS = [{
+    'title': "AS更新日志",
+    'link': 'https://developer.android.google.cn/studio/releases/index.html'
+}, {
+    'title': "AS预览版特性",
+    'link': 'https://developer.android.google.cn/studio/preview/features/'
+}, {
+    'title': "AS版本下载列表",
+    'link': 'https://developer.android.google.cn/studio/archive'
+}, {
+    'title': "AS使用指南",
+    'link': 'https://developer.android.google.cn/studio/intro'
+}, {
+    'title': 'Android 版本更新日志',
+    'link': 'https://developer.android.google.cn/preview'
+}, {
+    'title': 'Android 开发参考',
+    'link': 'https://developer.android.google.cn/reference'
+}, {
+    'title': 'Android 开发指南',
+    'link': 'https://developer.android.google.cn/guide'
+}, {
+    'title': 'Kotlin 上手指南',
+    'link': 'https://developer.android.google.cn/kotlin'
+}]
+
+function fillList(parentId, datas) {
+    $(parentId).children().remove()
+    datas.forEach(item => {
+        let li = $('<li></li>').addClass('list-group-item click_item').text(item.title)
+        $(parentId).append(li)
+
+        $(li).click(function () {
+            window.open(item.link)
+        })
+    });
+}
 
 $(document).ready(() => {
-    updateUI()
-
     $('#search').click(() => {
         let input = $('#input').val()
         openAndroid(input)
@@ -118,4 +180,8 @@ $(document).ready(() => {
         let input = $('#input_b').val()
         openJcenter(input)
     })
+
+    updateUI()
+    fillList('#right_aside', RIGHT_LINKS)
+    fillList('#left_aside', LEFT_LINKS)
 })

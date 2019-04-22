@@ -39,3 +39,32 @@
     background-color: rgba(102, 175, 233, .6);
     border-radius: 45px;
 }
+
+.right_aside {
+    display: none;
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
+.left_aside {
+    display: none;
+    position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    margin: 10px;
+}
+
+
+@media (min-width: 1200px) {
+    .right_aside {
+        display: block;
+    }
+
+    .left_aside {
+        display: block;
+    }
+}
