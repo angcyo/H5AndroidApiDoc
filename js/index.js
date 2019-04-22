@@ -121,8 +121,11 @@ const LEFT_LINKS = [{
     'title': 'Java 开源库排行榜',
     'link': 'https://github.com/search?l=Java&type=Repositories&q=stars:>=1000'
 }, {
-    'title': 'Java 最近流行开源库排行榜',
+    'title': 'Java 最近火爆的开源库排行榜',
     'link': 'https://github.com/search?l=Java&type=Repositories&q=stars:>=1000&s=updated&o=desc'
+}, {
+    'title': 'Java 最近流行的开源库排行榜',
+    'link': 'https://github.com/search?l=Java&type=Repositories&q=stars:>=100&s=updated&o=desc'
 }, {
     'title': '阿里巴巴镜像',
     'link': 'https://opsx.alibaba.com/mirror?lang=zh-CN'
