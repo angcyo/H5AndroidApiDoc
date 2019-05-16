@@ -139,6 +139,9 @@ const RIGHT_LINKS = [{
     'title': "AS更新日志",
     'link': 'https://developer.android.google.cn/studio/releases/index.html'
 }, {
+    'title': 'AS最新预览版',
+    'link': 'https://developer.android.google.cn/studio/preview/'
+}, {
     'title': "AS预览版特性",
     'link': 'https://developer.android.google.cn/studio/preview/features/'
 }, {
